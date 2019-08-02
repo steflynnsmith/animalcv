@@ -1,0 +1,525 @@
+/* Variables -----------------------------------------------------------------*/
+
+$navbar-color: #333;
+
+
+/*----------------------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #f9f9f9;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,h2 {  
+    font-family: 'Pacifico', sans-serif;
+    text-align: center;
+    align-content: center;
+    color: rgba(255, 255, 255, 1);
+    text-transform: capitalize;
+    font-weight: normal;
+    line-height: 1.3; 
+    text-shadow: 0 1px 3px rgba(0,0,0,.8);
+    margin: auto;
+    padding: 50px;
+  }
+h1 {
+    font-size: 6rem; 
+}
+h2 {
+    font-size: 3rem; 
+    color:$navbar-color;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+} 
+
+
+
+
+/* Navbar---------------------------------------------------------------*/
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+    
+
+    
+    .logo {
+        margin: auto;
+        border: 3px solid white;
+        border-radius: 50%;
+        padding: 3px 3px 2px 5px;
+        transition: transform .4s ease-in-out, opacity .4s ease-in;
+    }
+    img {
+        width: 3em;
+        
+    }
+}
+.logo-name {
+    display: flex;
+    margin-left: 3%;
+    justify-content: space-between;
+    h3 {
+    margin-left: 20px;
+    letter-spacing: 0.2em;
+    color: rgba(200, 200, 200, 0);
+    transition: color .3s ease-in;
+
+    }
+}
+.logo:hover{
+    transform: rotate(320deg) scale(0.9);
+    opacity: 0.5;
+
+    +h3 {
+        color: rgba(240, 240, 240, 1);
+
+    }
+    
+        
+}
+
+
+.nav-links {
+    text-align: center;
+    display: flex;
+    letter-spacing: .05em;
+    
+    margin-right: 3%;
+    // flex-basis: auto;
+    li{
+        font-size: 1.3em;
+        padding: 10px 30px;
+        
+            
+    }
+    a {
+        text-decoration: none;
+        color: #f9f9f9;
+        transition: color .1s ease-in-out;
+    }
+    a:hover {
+        color: firebrick
+        
+    }
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}
+/* Page TOPPER------------------------------------------------------------------*/
+.page-top {
+    display: flex;
+    text-align: center;
+    // margin: 300px;
+    height: 800px;
+    padding: 100px;
+    margin-top: 60px;
+    
+    // background: linear-gradient(lighten($navbar-color, 10%), transparent 95%),
+    //           linear-gradient(0deg, #fff, transparent)
+    // background-color: lighten($navbar-color, 10%)
+}
+.name,
+.page-top-background {
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.page-top-background {
+    background:   url('../img/stef-mountain.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+.name {
+    z-index: 10;
+    margin-top: 0px;
+    background: rgba(0,0,0,.2);
+      box-shadow:  inset 0 0 600px 30px #000000;
+        } 
+
+
+
+
+  .face-photo img {
+    max-width: 400px;
+    // margin-right: 75%;
+    // flex-basis: 100px;
+    margin: auto 0;
+    width:100%;
+    border:3px solid black;
+    border-radius:50%;
+
+    //   background: url(../img/face-photo.jpg);
+
+  }
+
+/* INTRODUCTION SECTION--------------------------------------------------------*/
+.bg-coloring-primary {
+   
+      background: lighten($navbar-color, 60%) url(../img/sls-light.png);
+   
+}
+
+.introduction {
+    font-size: 1.4rem;
+    width: 80%;
+    padding: 50px 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-content: center;
+    p {
+        font-weight: bold;
+        color: #333;
+        max-width: 50%;
+        margin: auto 0;
+        padding: 0 5%;
+    }
+  }
+
+/* Previous Experience Section ----------*/
+
+
+
+
+.experience-heading {
+    color: lighten($navbar-color, 20%);
+}
+
+.jobs-section {
+    background-color: lighten($navbar-color, 80%);
+
+}
+
+.job-group {
+
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 40px;
+    justify-content: center;
+  }
+
+.job-item {
+    display: flex;
+    padding: 1rem;
+    max-width: 400px;
+}
+
+.job {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &:hover {
+      .job-image {
+        filter: contrast(100%);
+      }
+    }
+}
+
+.job-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.job-title {
+      font-weight: bold;
+      letter-spacing: 0.05em;
+}
+
+.job-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s ease-in;
+    &::before {
+      content: "";
+        display: block;
+      padding-bottom: 300px;
+    }    
+}
+
+.job-image1 {
+      background-image: url(../img/job-01.jpg);
+}
+
+.job-image2 {
+      background-image: url(../img/job-02.jpg);
+}
+
+.job-image3 {
+      background-image: url(../img/job-03.jpg);
+}
+
+
+
+
+
+/* QUALIFCATIONS *------------------------------------------------*/
+
+.qualifications {
+    margin: auto;
+    // width: 90%;
+    display: flex;
+    padding: 0 10% 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.qual-list {
+    display: flex;
+    
+    margin: 4em auto;
+    // flex-basis: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    & label{
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #222;
+    }
+    & li {
+        color: #555;
+        font-size: 1.2em;
+        margin: 1em 1em 2em;
+    }
+
+}
+.underline {
+    font-weight: bold;
+    color: #444;
+}
+
+.qual-img {
+    // text-align: center;
+    width: 70%;
+    border: 5px solid black;
+    border-radius: 50%;
+    margin: auto;
+    flex-basis: 2;
+}
+
+.qual-pic {
+    margin: 2em;
+    text-align: center;
+
+}
+
+// .qual-pic {
+//     background-image: url(../img/face-photo.jpg);
+//     min-width: 300px;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//    border-radius: 50%;
+//     filter: contrast(70%);
+//     overflow: hidden;
+//     position: relative;
+//     transition: filter 0.5s ease-in;
+//     &::before {
+//       content: "";
+//         display: block;
+//       padding: 300px;
+      
+//     }    
+// }
+
+
+
+/* CONTACT *------------------------------------------------*/
+
+
+.icons {
+    margin: auto;
+    // width: 10%;
+    display: flex;
+    justify-content: space-around;
+        padding: 30px 15%;
+    
+
+}
+.icon img{
+    display: block;
+    width: 200%;
+    padding: 5px;
+    transition: transform .2s cubic-bezier(.6,-0.47,.41,1.03);
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
+
+/* Footer *------------------------------------------------*/
+
+footer {
+    height: 5em;
+    background-color: $navbar-color;
+    span {
+        margin:auto;
+        text-align: center;
+    }
+
+}
+
+
+.footer-text {
+    display: block;
+    padding-top: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+
+@media (max-width: 1500px) {
+.qualifications {
+    padding: 0 2% 50px;
+    }
+}
+
+@media (max-width: 1216px) {
+    .job-image1 {
+        background-position-y: 0%;
+    }
+    .job1 {
+        max-width: 800px;
+    }
+    .qual-list {
+        margin: 2em auto;
+    }
+   
+}
+
+@media (max-width: 827px) {
+    h1 {
+        font-size: 4rem;
+        padding: 100px 0;
+    }
+    .introduction {
+        margin: auto;
+        padding: 10px;
+        p {
+            padding: 5%;
+            max-width:100%;
+        }
+    }
+    .job-item {
+        display: flex;
+        padding: 1rem;
+        // width: 90%;
+        max-width: 600px;
+    }
+    .job-group {
+        padding: 0 10px;
+    }
+  
+  .icons {
+    padding:20px 4%;
+      
+  }
+}
+
+  @media (max-width: 650px) {
+    .navbar, .nav-links {
+        flex-direction: column;
+    }
+
+    .page-top-background {
+        background-size: 300%;
+        background-position: 28% 57%;
+
+    }
+    .hide-name {
+        display: none;
+    }
+    .logo {
+    display: none;
+    }
+    h1 {
+    padding: 600px 0 0 0 ;
+    margin: 0 20px 0 160px;
+    text-align: right;
+    }
+ 
+    .icon img{
+        width: 140%;
+    }
+    
+
+}
+
+ @media (max-width: 510px) {
+
+    .nav-links li {
+        padding: 5px 16px;
+    }
+
+    .page-top {
+        margin-top: -50px;
+    }
+    .background-coloring-primary {
+        background: lighten($navbar-color, 60%);
+    }
+    h1 {
+        font-size: 2rem;
+        padding: 730px 0 0 0 ;
+        margin: 0 20px 0 0px;
+        text-align: right;
+    }
+    .page-top-background {
+        background-size: 300%;
+        background-position: 28% 45%;
+
+    }
+    .introduction {
+        p{
+            font-size: 1rem;
+        }
+    }
+ }
+
+
+
